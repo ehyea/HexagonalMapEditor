@@ -1,0 +1,27 @@
+﻿<Window x:Class="MapEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1334" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="261*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Name="scroll"  Margin="0,2,0,0"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Height="702" Width="1029" >
+            <local:SpecialCanvas x:Name="canvas" Background="Azure" Margin="0,0,0,0" MouseDown="clusterPreview_MouseLeftButtonDown" HorizontalAlignment="Left" VerticalAlignment="Top" >
+
+            </local:SpecialCanvas>
+        </ScrollViewer>
+        <Button x:Name="button" Grid.Column="1" Margin="0,97,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Click="button_Click" Width="76" Height="22" Content="save"/>
+        <Button x:Name="button2" Content="npc" Grid.Column="1" HorizontalAlignment="Center" Margin="0,189,0,0" VerticalAlignment="Top" Width="76" Click="button2_Click"/>
+        <Button x:Name="button1" Content="moveState" Grid.Column="1" HorizontalAlignment="Center" Margin="0,225,0,0" VerticalAlignment="Top" Width="76" Click="button1_Click"/>
+        <Button x:Name="button3" Content="new" Grid.Column="1" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click"/>
+        <Button x:Name="button4" Content="open" Grid.Column="1" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+    </Grid>
+</Window>
+    
+
